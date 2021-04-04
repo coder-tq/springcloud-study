@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>springcloud-api</module>
+        <module>springcloud-provider-dept-8001</module>
     </modules>
     <name>springcloud</name>
 
@@ -37,7 +38,7 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.47</version>
+                <version>8.0.11</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
