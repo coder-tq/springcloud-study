@@ -5,17 +5,19 @@
 <mapper namespace="com.coder_tq.springcloud.dao.DeptDao">
 
     <resultMap id="DeptMap" type="Dept">
-        
+        <id column="deptno" property="deptno"/>
+        <result column="deptname" property="deptname"/>
+        <result column="db_source" property="dbSource"/>
     </resultMap>
     
     <insert id="addDept" parameterType="Dept">
         INSERT INTO dept(deptname,db_source)
         VALUES (#{deptname},DATABASE())
     </insert>
-    <select id="queryById" resultType="Dept" parameterType="Long">
+    <select id="queryById" resultMap="DeptMap" parameterType="Long">
         SELECT * FROM dept WHERE deptno=#{deptno};
     </select>
-    <select id="queryAll" resultType="Dept">
+    <select id="queryAll" resultMap="DeptMap">
         SELECT * FROM dept;
     </select>
 </mapper>

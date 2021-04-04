@@ -9,6 +9,7 @@
     <modules>
         <module>springcloud-api</module>
         <module>springcloud-provider-dept-8001</module>
+        <module>springcloud-customer-dept-80</module>
     </modules>
     <name>springcloud</name>
 
