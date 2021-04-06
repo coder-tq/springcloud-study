@@ -16,3 +16,14 @@ spring:
     password: Weiliangdada123`
 
 #debug: true
+
+#eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:7001/eureka/,http://eureka2:7002/eureka/,http://eureka3:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-8001
+
+info:
+  author: coder_tq

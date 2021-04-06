@@ -15,7 +15,7 @@ import java.util.List;
 public class DeptCustomerController {
 
     private RestTemplate restTemplate;
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    private static final String REST_URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @Autowired
     public void setRestTemplate(RestTemplate restTemplate) {
@@ -29,7 +29,7 @@ public class DeptCustomerController {
 
     @RequestMapping("/customer/dept/get/{id}")
     public Dept get(@PathVariable("id") long id){
-        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/get/+id",Dept.class);
+        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/get/"+id,Dept.class);
     }
 
     @RequestMapping("/customer/dept/list")
