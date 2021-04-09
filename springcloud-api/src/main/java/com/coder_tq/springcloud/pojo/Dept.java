@@ -1,8 +1,13 @@
 package com.coder_tq.springcloud.pojo;
 
 
+import lombok.Data;
+import lombok.experimental.Accessors;
+
 import java.io.Serializable;
 
+@Data
+@Accessors(chain = true)
 public class Dept implements Serializable {
 
   private long deptno;//主键
@@ -16,32 +21,6 @@ public class Dept implements Serializable {
 
   public Dept(String deptname) {
     this.deptname = deptname;
-  }
-
-  public long getDeptno() {
-    return deptno;
-  }
-
-  public void setDeptno(long deptno) {
-    this.deptno = deptno;
-  }
-
-
-  public String getDeptname() {
-    return deptname;
-  }
-
-  public void setDeptname(String deptname) {
-    this.deptname = deptname;
-  }
-
-
-  public String getDbSource() {
-    return dbSource;
-  }
-
-  public void setDbSource(String dbSource) {
-    this.dbSource = dbSource;
   }
 
 }
